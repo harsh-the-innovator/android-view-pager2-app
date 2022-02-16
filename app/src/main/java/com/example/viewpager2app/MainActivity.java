@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         PagerAdapter adapter = new PagerAdapter(this);
         adapter.setCars(cars);
+        viewPager.setPageTransformer(new DepthPageTransformer());
         viewPager.setAdapter(adapter);
     }
 }
